@@ -17,9 +17,6 @@ COPY . .
 # Instalar dependencias
 RUN composer install --no-dev --optimize-autoloader
 
-# Generar clave de app
-RUN php artisan key:generate
-
 # Exponer el puerto
 EXPOSE 10000
 
