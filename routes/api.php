@@ -42,7 +42,7 @@ Route::post('/login', function (Request $request) {
         'username' => 'required|string',
         'password' => 'required|string',
     ]);
-
+ 
     $user = User::where('name', $request->username)->first();
 
     if (!$user || $user->password !== $request->password) {
